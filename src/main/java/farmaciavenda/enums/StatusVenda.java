@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.enums;
 
 /**
- *
- * @author luizgustavo
+ * Enum que representa o status atual de uma venda.
  */
-public class StatusVenda {
-    
+public enum StatusVenda {
+    PENDENTE("Pendente"),
+    FINALIZADA("Finalizada"),
+    CANCELADA("Cancelada");
+
+    private final String descricao;
+
+    StatusVenda(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

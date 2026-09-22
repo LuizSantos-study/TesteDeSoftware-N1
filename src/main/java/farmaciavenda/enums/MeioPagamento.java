@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.enums;
 
 /**
- *
- * @author luizgustavo
+ * Enum que define o meio/tipo de pagamento utilizado.
  */
-public class MeioPagamento {
-    
+public enum MeioPagamento {
+    PIX("PIX"),
+    DINHEIRO("Dinheiro"),
+    CARTAO_CREDITO("Cartão de Crédito"),
+    CARTAO_DEBITO("Cartão de Débito");
+
+    private final String descricao;
+
+    MeioPagamento(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

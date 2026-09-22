@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.exception;
 
 /**
- *
- * @author luizgustavo
+ * Exceção lançada quando as exigências sanitárias para medicamentos controlados (SNGPC)
+ * não são satisfeitas (ex: falta de receita médica ou ausência de validação de farmacêutico).
  */
-public class MedicamentoControladoException {
-    
+public class MedicamentoControladoException extends RuntimeException {
+
+    public MedicamentoControladoException(String mensagem) {
+        super(mensagem);
+    }
+
+    public MedicamentoControladoException(String mensagem, Throwable causa) {
+        super(mensagem, causa);
+    }
 }

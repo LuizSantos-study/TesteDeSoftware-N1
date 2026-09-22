@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.repository;
 
+import farmaciavenda.models.Venda;
+import java.util.List;
+import java.util.Optional;
+
 /**
- *
- * @author luizgustavo
+ * Interface de repositório para operações de persistência e consulta de vendas.
  */
-public class VendaRepository {
-    
+public interface VendaRepository {
+
+    Venda salvar(Venda venda);
+
+    Optional<Venda> buscarPorId(Long id);
+
+    List<Venda> listarTodas();
+
+    void deletar(Long id);
 }

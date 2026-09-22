@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.enums;
 
 /**
- *
- * @author luizgustavo
+ * Enum que categoriza o tipo do produto comercializado pela farmácia.
  */
-public class TipoProduto {
-    
+public enum TipoProduto {
+    REFERENCIA("Medicamento de Referência"),
+    GENERICO("Medicamento Genérico"),
+    SIMILAR("Medicamento Similar"),
+    PERFUMARIA("Perfumaria e Cosméticos");
+
+    private final String descricao;
+
+    TipoProduto(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }
