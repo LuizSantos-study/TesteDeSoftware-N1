@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.enums;
 
 /**
- *
- * @author luizgustavo
+ * Enum que define o convênio ou plano associado ao cliente da farmácia.
  */
-public class PlanoCliente {
-    
+public enum PlanoCliente {
+    SAUDE("Plano de Saúde / Convênio"),
+    FIDELIDADE("Programa de Fidelidade"),
+    NENHUM("Sem Plano / Particular");
+
+    private final String descricao;
+
+    PlanoCliente(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

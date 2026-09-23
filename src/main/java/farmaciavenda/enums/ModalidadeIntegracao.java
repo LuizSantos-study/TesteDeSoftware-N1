@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.enums;
 
 /**
- *
- * @author luizgustavo
+ * Enum que define o tipo/modalidade técnica de processamento do pagamento.
+ * TEF (Transferência Eletrônica de Fundos) ou POS (Point of Sale/Maquininha autônoma).
  */
-public class ModalidadeIntegracao {
-    
+public enum ModalidadeIntegracao {
+    TEF("Transferência Eletrônica de Fundos (TEF)"),
+    POS("Point of Sale (POS)"),
+    NAO_APLICAVEL("Não Aplicável");
+
+    private final String descricao;
+
+    ModalidadeIntegracao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

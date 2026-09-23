@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.exception;
 
 /**
- *
- * @author luizgustavo
+ * Exceção lançada quando uma operação de desconto é inválida (ex: desconto negativo
+ * ou desconto que resulte em valor total negativo).
  */
-public class DescontoInvalidoException {
-    
+public class DescontoInvalidoException extends RuntimeException {
+
+    public DescontoInvalidoException(String mensagem) {
+        super(mensagem);
+    }
+
+    public DescontoInvalidoException(String mensagem, Throwable causa) {
+        super(mensagem, causa);
+    }
 }

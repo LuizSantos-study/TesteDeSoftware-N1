@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package farmaciavenda.exception;
 
 /**
- *
- * @author luizgustavo
+ * Exceção lançada ao tentar modificar itens, valores ou status de uma venda
+ * que já foi concluída/finalizada.
  */
-public class VendaFinalizadaException {
-    
+public class VendaFinalizadaException extends RuntimeException {
+
+    public VendaFinalizadaException(String mensagem) {
+        super(mensagem);
+    }
+
+    public VendaFinalizadaException(String mensagem, Throwable causa) {
+        super(mensagem, causa);
+    }
 }
