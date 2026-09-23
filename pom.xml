@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>25</maven.compiler.release>
-        <exec.mainClass>adapter.softwaretestn1.SoftwareTestN1</exec.mainClass>
+        <exec.mainClass>farmaciavenda.pdv.TerminalPdv</exec.mainClass>
     </properties>
     <dependencies>
     <!-- Mockito Core & JUnit Jupiter Integration -->
